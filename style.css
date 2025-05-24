@@ -1,0 +1,331 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #009ea3; /* Fondo celeste azulado claro */
+            color: #055d5f; /* Texto oscuro */
+        }
+        .navbar {   
+            background-color: #7a1414; /* Blanco */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .navbar-brand {
+            font-weight: 600; /* Negrita */
+            color: #0c4da2; /* Azul UABJB */
+        }
+        .navbar-nav .nav-link {
+            color: #0c4da2; /* Azul UABJB */
+            margin-left: 1rem; /* Espacio entre enlaces */
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: #083363; /* Azul más oscuro al pasar el mouse o activo */
+            font-weight: 500;  /* Medium font weight on hover/active */
+        }
+        .jumbotron { /* Banner principal */
+            background-image: url('https://www.uabjb.edu.bo/wp-content/uploads/2021/08/investigacion.jpg'); /* Reemplaza con una imagen relevante */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* Texto blanco para el banner */
+            padding: 10rem 0; /* Ajusta el relleno vertical */
+            text-align: center;
+            border-radius: 0; /* Sin bordes redondeados */
+            position: relative; /* Para el degradado */
+        }
+        .jumbotron::before { /* Degradado oscuro */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15, 104, 206, 0.3), rgba(8, 72, 192, 0.7)); /* Ajusta los valores para el degradado */
+            opacity: 0.8;
+            pointer-events: none; /* Evita que el degradado interfiera con los clics */
+        }
+        .jumbotron h1 {
+            font-size: 3rem; /* Tamaño de título grande */
+            font-weight: 700; /* Negrita */
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto */
+            z-index: 1; /* Asegura que el texto esté sobre el degradado */
+            position: relative;
+        }
+        .jumbotron p {
+            font-size: 1.2rem; /* Tamaño de párrafo */
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra de texto */
+            z-index: 1;
+            position: relative;
+        }
+        .btn-primary {
+            background-color: #e65100; /* Naranja UABJB */
+            border-color: #e65100;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem; /* Aumenta el padding del botón */
+            font-size: 1.1rem;
+            z-index: 1;
+            position: relative;
+        }
+        .btn-primary:hover {
+            background-color: #b03a00; /* Naranja más oscuro al pasar el mouse */
+            border-color: #b03a00;
+        }
+        .footer {
+            background-color: #f8f9fa; /* Fondo del footer igual al body */
+            padding: 1rem 0;
+            text-align: center;
+            color: #6c757d; /* Texto gris */
+            border-top: 1px solid #dee2e6; /* Borde superior suave */
+        }
+        .footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo */
+        }
+        /* Estilos para el botón de ir arriba */
+        #btn-up {
+            position: fixed; /* Posición fija en la pantalla */
+            bottom: 20px; /* Distancia desde la parte inferior */
+            right: 20px; /* Distancia desde la derecha */
+            z-index: 1000; /* Asegura que esté sobre otros elementos */
+            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            opacity: 0; /* Inicialmente invisible */
+            transition: opacity 0.3s ease-in-out; /* Transición suave de opacidad */
+            border-radius: 50%; /* Hace que el botón sea un círculo */
+            width: 40px; /* Ancho del botón */
+            height: 40px; /* Alto del botón */
+            background-color: #e65100; /* Color naranja */
+            color: white; /* Color del icono */
+            border: none; /* Sin borde */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        #btn-up:hover {
+            opacity: 0.7; /* Opacidad al pasar el mouse */
+        }
+
+        #btn-up.show {
+            opacity: 1; /* Hace que el botón sea visible cuando se agrega la clase .show */
+        }
+
+        #btn-up i {
+            font-size: 20px; /* Tamaño del icono */
+            line-height: 40px; /* Centra verticalmente el icono */
+        }
+
+        /* Carrusel */
+        .carousel-item img {
+            height: 500px; /* Altura fija para las imágenes del carrusel */
+            object-fit: cover; /* Recorta y escala la imagen para llenar el contenedor */
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto del carrusel */
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 20%; /* Posición del texto */
+        }
+        .carousel-caption h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Información General */
+        .info-general {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .info-general h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .info-general p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Documentos de Consulta */
+        .documentos-consulta {
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .documentos-consulta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .documentos-consulta ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .documentos-consulta ul li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 1rem;
+        }
+        .documentos-consulta ul li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .documentos-consulta ul li a {
+            color: #0c4da2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .documentos-consulta ul li a:hover {
+            color: #083363;
+            text-decoration: underline;
+        }
+
+        /* Aliados */
+        .aliados {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .aliados h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .aliados .logos-aliados {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .aliados .logos-aliados img {
+            height: 100px; /* Altura fija para los logos */
+            object-fit: contain; /* Escala la imagen para que quepa dentro del contenedor */
+            filter: grayscale(100%); /* Inicialmente en escala de grises */
+            transition: filter 0.3s ease-in-out; /* Transición suave para el efecto hover */
+        }
+        .aliados .logos-aliados img:hover {
+            filter: none; /* Devuelve el color al pasar el mouse */
+        }
+
+        /* Oferta de Cursos */
+        .oferta-cursos {
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .oferta-cursos h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .oferta-cursos .card {
+            margin-bottom: 2rem;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .oferta-cursos .card:hover {
+            transform: translateY(-5px);
+        }
+        .oferta-cursos .card-title {
+            font-size: 1.5rem;
+            color: #0c4da2;
+            margin-bottom: 1rem;
+        }
+        .oferta-cursos .card-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .oferta-cursos .btn-primary {
+            background-color: #e65100;
+            border-color: #e65100;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+        }
+        .oferta-cursos .btn-primary:hover {
+            background-color: #b03a00;
+            border-color: #b03a00;
+        }
+
+        /* Formulario de Registro */
+        .formulario-registro {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .formulario-registro h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .formulario-registro form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .formulario-registro .form-label {
+            font-weight: 500;
+            color: #0c4da2;
+            margin-top: 0.5rem;
+        }
+        .formulario-registro .form-control {
+            border-radius: 5px;
+            border-color: #dee2e6;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .formulario-registro .form-control:focus {
+            border-color: #0c4da2;
+            box-shadow: 0 0 0 3px rgba(12, 77, 162, 0.1);
+        }
+        .formulario-registro .btn-primary {
+            background-color: #e65100;
+            border-color: #e65100;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+        .formulario-registro .btn-primary:hover {
+            background-color: #b03a00;
+            border-color: #b03a00;
+        }
+
+        /* Mapa */
+        .mapa {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .mapa h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0c4da2;
+        }
+        .mapa iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(194, 25, 25, 0.1);
+        }
+

@@ -1,0 +1,92 @@
+
+        /* Estilos para el panel lateral derecho */
+        .sidebar {
+            width: 0;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 1050;
+        }
+
+        .sidebar.open {
+            width: 300px;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background-color: #0d6efd; /* Color primary de Bootstrap */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar-menu a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .sidebar-menu i {
+            margin-right: 10px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Ajustes para el navbar */
+        .navbar {
+            z-index: 1030; /* Asegura que el navbar esté sobre el sidebar */
+        }
+    

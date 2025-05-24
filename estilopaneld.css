@@ -1,0 +1,206 @@
+:root {
+    --primary-dark: #1e3c72;
+    --primary-medium: #2a5298;
+    --secondary-dark: #b21f1f;
+    --secondary-medium: #d53369;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--secondary-dark) 50.1%, var(--secondary-medium) 100%);
+    color: white;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.user-avatar {
+    background: linear-gradient(45deg, var(--primary-dark), var(--secondary-medium));
+    color: white;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.sidebar-menu {
+    padding: 0 15px;
+}
+
+.sidebar-menu li a {
+    color: white;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid white;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-menu li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 3px solid white;
+}
+
+.close-btn {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.badge-role {
+    background-color: white;
+    color: var(--secondary-medium);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card {
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+}
+
+.quick-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    border: 1px solid #dee2e6;
+    text-decoration: none;
+}
+
+.quick-action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+}
+
+.quick-action-btn i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.notification-item {
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+    padding: 15px;
+}
+
+.notification-item:hover {
+    border-left-color: var(--secondary-medium);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.course-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-medium) !important;
+}
+
+.bg-secondary-custom {
+    background-color: var(--secondary-medium) !important;
+}
+
+.text-primary-custom {
+    color: var(--primary-medium) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-medium) !important;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-medium);
+    border-color: var(--primary-dark);
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-secondary-custom {
+    background-color: var(--secondary-medium);
+    border-color: var(--secondary-dark);
+}
+
+.btn-secondary-custom:hover {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+}

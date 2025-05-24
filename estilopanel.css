@@ -1,0 +1,59 @@
+.sidebar {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #b21f1f 50.1%, #d53369 100%);
+    color: white;
+    /* Mantén el resto de tus estilos existentes */
+}
+
+.sidebar-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.user-avatar {
+    background: linear-gradient(45deg, #1e3c72, #d53369);
+    color: white;
+    /* Mantén tus estilos existentes para el avatar */
+}
+
+.sidebar-menu li a {
+    color: white;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid white;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.close-btn {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+    

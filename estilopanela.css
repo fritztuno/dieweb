@@ -1,0 +1,129 @@
+:root {
+    --primary-blue: #1e3c72;
+    --secondary-blue: #2a5298;
+    --primary-red: #b21f1f;
+    --secondary-red: #d53369;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}
+
+.sidebar {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 50%, var(--primary-red) 50.1%, var(--secondary-red) 100%);
+    color: white;
+    min-height: 100vh;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-info {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.admin-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid white;
+    background: linear-gradient(45deg, var(--secondary-blue), var(--secondary-red));
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    margin: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left: 3px solid white;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.stat-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bg-blue {
+    background-color: var(--secondary-blue);
+}
+
+.bg-red {
+    background-color: var(--secondary-red);
+}
+
+.bg-dark-blue {
+    background-color: var(--primary-blue);
+}
+
+.bg-dark-red {
+    background-color: var(--primary-red);
+}
+
+.btn-blue {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-red {
+    background-color: var(--secondary-red);
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.logout-link {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.badge-role {
+    background-color: white;
+    color: var(--secondary-red);
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
